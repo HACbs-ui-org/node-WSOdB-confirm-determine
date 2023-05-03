@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: node-express-hello-futd
+  namespace: burrzinga-hac-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/stonesoupuicluster/burrzinga-hac-tenant/node/node-express-hello-futd@sha256:bd30637885ef0f75eb8522ba8c6d2cfacf6deb2dd1d0344995198a20929ca164
+        name: my-nodejs
+        resources: {}
+status: {}
